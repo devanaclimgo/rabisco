@@ -74,3 +74,105 @@ Started GET "/favicon.ico" for ::1 at 2026-04-02 12:45:50 -0300
   
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mPrompt Load (1.9ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Destroy (2.4ms)[0m  [1m[31mDELETE FROM "prompts" WHERE "prompts"."id" = 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Destroy (0.7ms)[0m  [1m[31mDELETE FROM "prompts" WHERE "prompts"."id" = 2 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Destroy (0.6ms)[0m  [1m[31mDELETE FROM "prompts" WHERE "prompts"."id" = 3 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Destroy (0.7ms)[0m  [1m[31mDELETE FROM "prompts" WHERE "prompts"."id" = 4 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Destroy (0.7ms)[0m  [1m[31mDELETE FROM "prompts" WHERE "prompts"."id" = 5 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Destroy (0.7ms)[0m  [1m[31mDELETE FROM "prompts" WHERE "prompts"."id" = 6 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (1.2ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe uma maçã', 'iniciante', 'objeto', 'simples… mas capricha hein. 2 coelhos 🐰', '2026-04-02 15:49:03.417845', '2026-04-02 15:49:03.417845') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.9ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe uma caneca', 'iniciante', 'objeto', 'cilindro disfarçado 👀 3 batatas 🥔', '2026-04-02 15:49:03.420616', '2026-04-02 15:49:03.420616') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.8ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um peixe', 'iniciante', 'animal', 'não complica… por enquanto. 2 sapos 🐸', '2026-04-02 15:49:03.422747', '2026-04-02 15:49:03.422747') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um gato sentado', 'iniciante', 'animal', 'fofo mas traiçoeiro. 3 coelhos 🐰', '2026-04-02 15:49:03.424802', '2026-04-02 15:49:03.424802') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.9ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um cacto', 'iniciante', 'natureza', 'espinhos = personalidade. 2 girafas 🦒', '2026-04-02 15:49:03.436614', '2026-04-02 15:49:03.436614') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe uma nuvem estilizada', 'iniciante', 'natureza', 'parece fácil… não é. 2 bananas 🍌', '2026-04-02 15:49:03.438984', '2026-04-02 15:49:03.438984') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um copo com água', 'iniciante', 'objeto', 'transparência te observa 👁️ 3 batatas 🥔', '2026-04-02 15:49:03.440814', '2026-04-02 15:49:03.440814') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (1.3ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe uma flor simples', 'iniciante', 'natureza', 'clássico dos clássicos. 2 coelhos 🐰', '2026-04-02 15:49:03.443187', '2026-04-02 15:49:03.443187') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.9ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe uma mão aberta', 'intermediario', 'anatomia', 'aqui começa o sofrimento. 5 sapos 🐸', '2026-04-02 15:49:03.445858', '2026-04-02 15:49:03.445858') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (1.2ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um rosto de perfil', 'intermediario', 'rosto', 'confia no processo… 6 coelhos 🐰', '2026-04-02 15:49:03.447892', '2026-04-02 15:49:03.447892') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um sapato', 'intermediario', 'objeto', 'ângulos suspeitos. 5 batatas 🥔', '2026-04-02 15:49:03.450236', '2026-04-02 15:49:03.450236') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um cachorro correndo', 'intermediario', 'animal', 'movimento é traiçoeiro 👀 6 sapos 🐸', '2026-04-02 15:49:03.452057', '2026-04-02 15:49:03.452057') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.8ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe uma cadeira em perspectiva', 'intermediario', 'perspectiva', 'linhas vão te testar. 6 girafas 🦒', '2026-04-02 15:49:03.454348', '2026-04-02 15:49:03.454348') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe uma pessoa sentada', 'intermediario', 'anatomia', 'proporção é tudo. 6 coelhos 🐰', '2026-04-02 15:49:03.456302', '2026-04-02 15:49:03.456302') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um olho realista', 'intermediario', 'rosto', 'a alma tá nos detalhes. 5 sapos 🐸', '2026-04-02 15:49:03.458144', '2026-04-02 15:49:03.458144') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.8ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe duas pessoas interagindo', 'avancado', 'anatomia', 'caos controlado. 8 girafas 🦒', '2026-04-02 15:49:03.461789', '2026-04-02 15:49:03.461789') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe uma rua em perspectiva', 'avancado', 'perspectiva', 'linhas infinitas te observam 👁️ 9 sapos 🐸', '2026-04-02 15:49:03.463753', '2026-04-02 15:49:03.463753') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um corpo em movimento', 'avancado', 'anatomia', 'fluidez ou nada. 8 coelhos 🐰', '2026-04-02 15:49:03.465494', '2026-04-02 15:49:03.465494') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um quarto bagunçado', 'avancado', 'cenario', 'detalhes infinitos. 9 batatas 🥔', '2026-04-02 15:49:03.467187', '2026-04-02 15:49:03.467187') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um retrato com sombras fortes', 'avancado', 'luz', 'luz e sombra brigando. 9 sapos 🐸', '2026-04-02 15:49:03.468935', '2026-04-02 15:49:03.468935') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (7.4ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe uma cena com 3 personagens', 'profissional', 'composicao', 'isso aqui é dor. 12 dragões 🐉', '2026-04-02 15:49:03.470734', '2026-04-02 15:49:03.470734') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe uma ilustração completa', 'profissional', 'composicao', 'boa sorte… sério. 12 girafas 🦒', '2026-04-02 15:49:03.479590', '2026-04-02 15:49:03.479590') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um cenário complexo com profundidade', 'profissional', 'perspectiva', 'profundidade mental também. 13 entidades 👁️', '2026-04-02 15:49:03.481498', '2026-04-02 15:49:03.481498') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um peixe com pernas humanas', 'caos', 'criatividade', 'não questione. 15 entidades 👁️', '2026-04-02 15:49:03.483561', '2026-04-02 15:49:03.483561') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.7ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um cavalo feito de gelatina', 'caos', 'criatividade', 'isso foi um erro. 17 girafas 🦒', '2026-04-02 15:49:03.485211', '2026-04-02 15:49:03.485211') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (1.0ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe um objeto cotidiano vivo', 'caos', 'criatividade', 'ele te observa. 16 sapos 🐸', '2026-04-02 15:49:03.487010', '2026-04-02 15:49:03.487010') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mPrompt Create (0.6ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe algo que não deveria existir', 'caos', 'criatividade', 'nem olha muito. 20 entidades 👁️', '2026-04-02 15:49:03.489072', '2026-04-02 15:49:03.489072') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mPrompt Count (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "prompts" /*application='Backend'*/[0m

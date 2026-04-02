@@ -50,3 +50,27 @@ Migrating to CreatePrompts (20260402152026)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
   [1m[36mPrompt Create (0.8ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe algo que não faz sentido mas ainda parece real', 'caos', 'criatividade', 'nem eu tentaria isso. 20 entidades desconhecidas 👁️', '2026-04-02 15:38:04.252269', '2026-04-02 15:38:04.252269') RETURNING "id" /*application='Backend'*/[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+Started GET "/" for ::1 at 2026-04-02 12:45:41 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/anaclimgo/.local/share/mise/installs/ruby/3.4.7/lib/ruby/gems/3.4.0/gems/railties-8.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/anaclimgo/.local/share/mise/installs/ruby/3.4.7/lib/ruby/gems/3.4.0/gems/railties-8.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 5.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/icon.png" for ::1 at 2026-04-02 12:45:41 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/icon.png"):
+  
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-02 12:45:50 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (3.0ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:11:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 46ms (Views: 0.5ms | ActiveRecord: 17.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2026-04-02 12:45:50 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  

@@ -1,28 +1,34 @@
-import { useState } from "react"
-import { motion } from 'framer-motion'
-import { Wand2, Sparkles } from 'lucide-react'
-import { Button } from './components/ui/button'
-import { DifficultySelector, type Difficulty } from './components/dashboard/difficulty-selector'
-import { PromptCard } from './components/dashboard/prompt-card'
-import { TimerSection } from './components/dashboard/timer-section'
-import { ReferenceGrid } from './components/dashboard/reference-grid'
-import { getRandomPrompt } from './lib/prompts'
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Wand2, Sparkles } from "lucide-react";
+import { Button } from "./components/ui/button";
+import {
+  DifficultySelector,
+  type Difficulty,
+} from "./components/dashboard/difficulty-selector";
+import { PromptCard } from "./components/dashboard/prompt-card";
+import { TimerSection } from "./components/dashboard/timer-section";
+import { ReferenceGrid } from "./components/dashboard/reference-grid";
+import { getRandomPrompt } from "./lib/prompts";
 
 export default function RabiscoApp() {
-  const [difficulty, setDifficulty] = useState<Difficulty>('iniciante')
-  const [currentPrompt, setCurrentPrompt] = useState<{ prompt: string; description: string } | null>(null)
-  const [timerEnabled, setTimerEnabled] = useState(true)
-  const [isGenerating, setIsGenerating] = useState(false)
+  const [difficulty, setDifficulty] = useState<Difficulty>("iniciante");
+  const [currentPrompt, setCurrentPrompt] = useState<{
+    prompt: string;
+    description: string;
+  } | null>(null);
+  const [timerEnabled, setTimerEnabled] = useState(true);
+  const [isGenerating, setIsGenerating] = useState(false);
 
   const generatePrompt = () => {
-    setIsGenerating(true)
+    setIsGenerating(true);
     // Small delay for better UX feedback
     setTimeout(() => {
-      const newPrompt = getRandomPrompt(difficulty)
-      setCurrentPrompt(newPrompt)
-      setIsGenerating(false)
-    }, 300)
-  }
+      const newPrompt = getRandomPrompt(difficulty);
+      setCurrentPrompt(newPrompt);
+      setIsGenerating(false);
+    }, 300);
+  };
 
   return (
     <main className="min-h-screen bg-background">
@@ -47,7 +53,10 @@ export default function RabiscoApp() {
             >
               <Sparkles className="w-7 h-7 text-primary" />
             </motion.div>
-            <h1 className="text-4xl font-bold text-foreground tracking-tight" style={{ fontFamily: 'var(--font-fredoka), sans-serif' }}>
+            <h1
+              className="text-4xl font-bold text-foreground tracking-tight"
+              style={{ fontFamily: "var(--font-fredoka), sans-serif" }}
+            >
               Rabisco
             </h1>
           </div>
@@ -89,7 +98,7 @@ export default function RabiscoApp() {
               >
                 <Wand2 className="w-5 h-5 mr-2" />
               </motion.div>
-              {isGenerating ? 'Gerando...' : 'Gerar prompt'}
+              {isGenerating ? "Gerando..." : "Gerar prompt"}
             </Button>
           </motion.div>
 
@@ -111,7 +120,10 @@ export default function RabiscoApp() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <TimerSection enabled={timerEnabled} onEnabledChange={setTimerEnabled} />
+            <TimerSection
+              enabled={timerEnabled}
+              onEnabledChange={setTimerEnabled}
+            />
           </motion.section>
 
           {/* Reference Grid */}
@@ -132,10 +144,21 @@ export default function RabiscoApp() {
           className="mt-12 text-center"
         >
           <p className="text-xs text-muted-foreground">
-            feito com ✨ para artistas em qualquer nível
+            ✨ para artistas em qualquer nível
+          </p>
+          <p className="text-[0.6rem] text-muted-foreground">
+            feito com ❤️ por{" "}
+            <a
+              href="https://github.com/devanaclimgo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Ana Gomes
+            </a>
           </p>
         </motion.footer>
       </div>
     </main>
-  )
+  );
 }

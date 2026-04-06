@@ -9,7 +9,7 @@ import {
 import { PromptCard } from "./components/dashboard/prompt-card";
 import { TimerSection } from "./components/dashboard/timer-section";
 import { ReferenceGrid } from "./components/dashboard/reference-grid";
-import { getRandomPrompt } from "./lib/prompts";
+import { fetchRandomPrompt } from "./lib/random-prompt";
 
 export default function RabiscoApp() {
   const [difficulty, setDifficulty] = useState<Difficulty>("iniciante");
@@ -19,15 +19,28 @@ export default function RabiscoApp() {
   } | null>(null);
   const [timerEnabled, setTimerEnabled] = useState(true);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [usedIds, setUsedIds] = useState<number[]>([]);
 
-  const generatePrompt = () => {
-    setIsGenerating(true);
-    // Small delay for better UX feedback
-    setTimeout(() => {
-      const newPrompt = getRandomPrompt(difficulty);
-      setCurrentPrompt(newPrompt);
+  const generatePrompt = async () => {
+    try {
+      setIsGenerating(true);
+
+      const newPrompt = await fetchRandomPrompt(difficulty, usedIds);
+
+      setCurrentPrompt({
+        prompt: newPrompt.text,
+        description: newPrompt.description,
+      });
+
+      setUsedIds((prev) => {
+        const updated = [...prev, newPrompt.id];
+        return updated.slice(-20);
+      });
+    } catch (error) {
+      console.error(error);
+    } finally {
       setIsGenerating(false);
-    }, 300);
+    }
   };
 
   return (

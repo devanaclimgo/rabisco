@@ -4,6 +4,8 @@ export interface PromptResponse {
   description: string;
 }
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export async function fetchRandomPrompt(
   difficulty: string,
   excludeIds: number[],
@@ -14,7 +16,7 @@ export async function fetchRandomPrompt(
   });
 
   const response = await fetch(
-    `http://localhost:3000/api/v1/prompts/random?${params}`,
+    `${API_URL}/api/v1/prompts/random?${params}`,
   );
 
   if (!response.ok) {

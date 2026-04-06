@@ -176,3 +176,176 @@ ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   [1m[36mPrompt Create (0.6ms)[0m  [1m[32mINSERT INTO "prompts" ("text", "difficulty", "category", "description", "created_at", "updated_at") VALUES ('Desenhe algo que não deveria existir', 'caos', 'criatividade', 'nem olha muito. 20 entidades 👁️', '2026-04-02 15:49:03.489072', '2026-04-02 15:49:03.489072') RETURNING "id" /*application='Backend'*/[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
   [1m[36mPrompt Count (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "prompts" /*application='Backend'*/[0m
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:19 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (3.2ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 44ms (Views: 0.3ms | ActiveRecord: 17.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2026-04-06 14:43:20 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:36 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (1.4ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:41 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.5ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:42 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.5ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:43 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.5ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:44 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.5ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:44 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.8ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:45 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.5ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:45 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.4ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:46 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.5ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:46 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.5ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:46 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.5ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:46 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.4ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:46 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.4ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:47 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.4ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:47 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.3ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:47 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.4ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:47 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.4ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:47 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.4ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:47 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.4ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante" for ::1 at 2026-04-06 14:43:47 -0300
+Processing by Api::V1::PromptsController#random as HTML
+  Parameters: {"difficulty" => "iniciante"}
+  [1m[36mPrompt Load (0.4ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+

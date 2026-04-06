@@ -3,43 +3,64 @@ Prompt.destroy_all
 prompts = [
 
   # 🟢 INICIANTE
-  { text: "Desenhe uma maçã", difficulty: "iniciante", category: "objeto", description: "simples… mas capricha hein. 2 coelhos 🐰" },
-  { text: "Desenhe uma caneca", difficulty: "iniciante", category: "objeto", description: "cilindro disfarçado 👀 3 batatas 🥔" },
-  { text: "Desenhe um peixe", difficulty: "iniciante", category: "animal", description: "não complica… por enquanto. 2 sapos 🐸" },
-  { text: "Desenhe um gato sentado", difficulty: "iniciante", category: "animal", description: "fofo mas traiçoeiro. 3 coelhos 🐰" },
-  { text: "Desenhe um cacto", difficulty: "iniciante", category: "natureza", description: "espinhos = personalidade. 2 girafas 🦒" },
-  { text: "Desenhe uma nuvem estilizada", difficulty: "iniciante", category: "natureza", description: "parece fácil… não é. 2 bananas 🍌" },
+  { text: "Desenhe uma maçã", difficulty: "iniciante", category: "objeto", description: "tranquilo… comece devagar. 1 maçã 🍎" },
+  { text: "Desenhe uma caneca de café", difficulty: "iniciante", category: "objeto", description: "nada mal pra começar o dia ☕" },
+  { text: "Desenhe uma árvore simples", difficulty: "iniciante", category: "natureza", description: "natureza básica, sem stress 🌳" },
+  { text: "Desenhe um gato dormindo", difficulty: "iniciante", category: "animal", description: "zzz... um gatinho relaxado 😺" },
+  { text: "Desenhe uma casa com chaminé", difficulty: "iniciante", category: "cenario", description: "clássico e aconchegante 🏠" },
+  { text: "Desenhe um sol sorridente", difficulty: "iniciante", category: "natureza", description: "vibes positivas garantidas ☀️" },
+  { text: "Desenhe uma flor simples", difficulty: "iniciante", category: "natureza", description: "só uma florzinha fofa 🌸" },
+  { text: "Desenhe um pássaro no galho", difficulty: "iniciante", category: "animal", description: "tweet tweet 🐦" },
   { text: "Desenhe um copo com água", difficulty: "iniciante", category: "objeto", description: "transparência te observa 👁️ 3 batatas 🥔" },
-  { text: "Desenhe uma flor simples", difficulty: "iniciante", category: "natureza", description: "clássico dos clássicos. 2 coelhos 🐰" },
+  { text: "Desenhe um cacto", difficulty: "iniciante", category: "natureza", description: "espinhos = personalidade. 2 girafas 🦒" },
 
   # 🟡 INTERMEDIÁRIO
+  { text: "Desenhe uma pessoa lendo um livro", difficulty: "intermediario", category: "anatomia", description: "já complica um pouco hein 👀" },
+  { text: "Desenhe um dragão bebê", difficulty: "intermediario", category: "criatura", description: "fofo mas perigoso 🐉" },
+  { text: "Desenhe uma cena de piquenique", difficulty: "intermediario", category: "composicao", description: "comida + natureza = desafio 🧺" },
+  { text: "Desenhe um robô jardineiro", difficulty: "intermediario", category: "criatividade", description: "tecnologia encontra natureza 🤖🌱" },
+  { text: "Desenhe um castelo nas nuvens", difficulty: "intermediario", category: "cenario", description: "arquitetura + fantasia ☁️🏰" },
+  { text: "Desenhe uma sereia no coral", difficulty: "intermediario", category: "criatura", description: "vida marinha com estilo 🧜‍♀️" },
+  { text: "Desenhe um mago preparando poção", difficulty: "intermediario", category: "fantasia", description: "magia em processo ✨🧪" },
+  { text: "Desenhe dois coelhos brincando", difficulty: "intermediario", category: "animal", description: "tranquilo… mas não vacila. 2 coelhos 🐰" },
   { text: "Desenhe uma mão aberta", difficulty: "intermediario", category: "anatomia", description: "aqui começa o sofrimento. 5 sapos 🐸" },
   { text: "Desenhe um rosto de perfil", difficulty: "intermediario", category: "rosto", description: "confia no processo… 6 coelhos 🐰" },
-  { text: "Desenhe um sapato", difficulty: "intermediario", category: "objeto", description: "ângulos suspeitos. 5 batatas 🥔" },
-  { text: "Desenhe um cachorro correndo", difficulty: "intermediario", category: "animal", description: "movimento é traiçoeiro 👀 6 sapos 🐸" },
-  { text: "Desenhe uma cadeira em perspectiva", difficulty: "intermediario", category: "perspectiva", description: "linhas vão te testar. 6 girafas 🦒" },
-  { text: "Desenhe uma pessoa sentada", difficulty: "intermediario", category: "anatomia", description: "proporção é tudo. 6 coelhos 🐰" },
-  { text: "Desenhe um olho realista", difficulty: "intermediario", category: "rosto", description: "a alma tá nos detalhes. 5 sapos 🐸" },
 
   # 🔴 AVANÇADO
+  { text: "Desenhe uma batalha épica entre um cavaleiro e um dragão", difficulty: "avancado", category: "acao", description: "isso vai doer... no bom sentido ⚔️🔥" },
+  { text: "Desenhe uma cidade steampunk vista de cima", difficulty: "avancado", category: "cenario", description: "perspectiva + detalhes = caos controlado 🏙️⚙️" },
+  { text: "Desenhe 5 sapos em uma orquestra", difficulty: "avancado", category: "criatividade", description: "5 sapos... boa sorte 🐸" },
+  { text: "Desenhe uma floresta encantada com criaturas mágicas", difficulty: "avancado", category: "fantasia", description: "prepare sua paciência 🌲✨" },
+  { text: "Desenhe um submarino explorador", difficulty: "avancado", category: "objeto", description: "nas profundezas do desafio 🌊" },
+  { text: "Desenhe uma cena de mercado medieval", difficulty: "avancado", category: "composicao", description: "muitas pessoas, muitos detalhes 🏪" },
+  { text: "Desenhe um phoenix renascendo das cinzas", difficulty: "avancado", category: "criatura", description: "dramático e intenso 🔥🦅" },
   { text: "Desenhe duas pessoas interagindo", difficulty: "avancado", category: "anatomia", description: "caos controlado. 8 girafas 🦒" },
-  { text: "Desenhe uma rua em perspectiva", difficulty: "avancado", category: "perspectiva", description: "linhas infinitas te observam 👁️ 9 sapos 🐸" },
-  { text: "Desenhe um corpo em movimento", difficulty: "avancado", category: "anatomia", description: "fluidez ou nada. 8 coelhos 🐰" },
-  { text: "Desenhe um quarto bagunçado", difficulty: "avancado", category: "cenario", description: "detalhes infinitos. 9 batatas 🥔" },
-  { text: "Desenhe um retrato com sombras fortes", difficulty: "avancado", category: "luz", description: "luz e sombra brigando. 9 sapos 🐸" },
+  { text: "Desenhe uma rua em perspectiva", difficulty: "avancado", category: "perspectiva", description: "linhas infinitas 👁️" },
+  { text: "Desenhe um quarto bagunçado", difficulty: "avancado", category: "cenario", description: "detalhes infinitos 🥔" },
 
   # 🟣 PROFISSIONAL
-  { text: "Desenhe uma cena com 3 personagens", difficulty: "profissional", category: "composicao", description: "isso aqui é dor. 12 dragões 🐉" },
-  { text: "Desenhe uma ilustração completa", difficulty: "profissional", category: "composicao", description: "boa sorte… sério. 12 girafas 🦒" },
-  { text: "Desenhe um cenário complexo com profundidade", difficulty: "profissional", category: "perspectiva", description: "profundidade mental também. 13 entidades 👁️" },
+  { text: "Desenhe 9 girafas em uma savana ao pôr do sol", difficulty: "profissional", category: "composicao", description: "boa sorte… 9 girafas 🦒" },
+  { text: "Desenhe uma metrópole cyberpunk à noite com chuva", difficulty: "profissional", category: "cenario", description: "prepare café ☔🌃" },
+  { text: "Desenhe uma batalha aérea entre dragões e naves", difficulty: "profissional", category: "acao", description: "fantasy meets sci-fi 🐉🚀" },
+  { text: "Desenhe um banquete real com 12 convidados", difficulty: "profissional", category: "composicao", description: "anatomia + comida = dor 👑" },
+  { text: "Desenhe uma biblioteca infinita estilo Escher", difficulty: "profissional", category: "perspectiva", description: "geometria impossível 📚" },
+  { text: "Desenhe uma guerra entre formigas e abelhas", difficulty: "profissional", category: "criatividade", description: "milhares de detalhes 🐜🐝" },
+  { text: "Desenhe uma cena com 3 personagens principais", difficulty: "profissional", category: "composicao", description: "isso aqui é dor. 12 dragões 🐉" },
 
   # ⚫ CAOS
-  { text: "Desenhe um peixe com pernas humanas", difficulty: "caos", category: "criatividade", description: "não questione. 15 entidades 👁️" },
-  { text: "Desenhe um cavalo feito de gelatina", difficulty: "caos", category: "criatividade", description: "isso foi um erro. 17 girafas 🦒" },
-  { text: "Desenhe um objeto cotidiano vivo", difficulty: "caos", category: "criatividade", description: "ele te observa. 16 sapos 🐸" },
-  { text: "Desenhe algo que não deveria existir", difficulty: "caos", category: "criatividade", description: "nem olha muito. 20 entidades 👁️" }
+  { text: "Desenhe 20 entidades jogando xadrez em outra dimensão", difficulty: "caos", category: "absurdo", description: "nem eu tentaria 👁️" },
+  { text: "Desenhe todos os seus medos como um monstro tomando chá", difficulty: "caos", category: "emocional", description: "terapia talvez 🍵👹" },
+  { text: "Desenhe o conceito de saudade", difficulty: "caos", category: "abstrato", description: "nível impossível 💭" },
+  { text: "Desenhe uma festa com objetos da sua casa", difficulty: "caos", category: "criatividade", description: "a geladeira dança 🎉" },
+  { text: "Desenhe o som do silêncio", difficulty: "caos", category: "abstrato", description: "... 🤫" },
+  { text: "Desenhe uma conversa entre o sol e a lua", difficulty: "caos", category: "fantasia", description: "filosófico ☀️🌙" },
+  { text: "Desenhe como cores teriam cheiro", difficulty: "caos", category: "sinestesia", description: "arte avançada 🎨👃" },
+  { text: "Desenhe o WiFi tendo um dia ruim", difficulty: "caos", category: "humor", description: "dor real 📶😭" },
+  { text: "Desenhe uma receita explicada por aliens", difficulty: "caos", category: "absurdo", description: "👽🎂 ???" },
+  { text: "Desenhe pensamentos intrusivos como gatinhos", difficulty: "caos", category: "emocional", description: "caos fofo 🐱💭" }
 
 ]
 
 Prompt.create!(prompts)
-puts "Seed criada com #{Prompt.count} prompts 🌱"
+
+puts "🌱 Seed criada com #{Prompt.count} prompts"

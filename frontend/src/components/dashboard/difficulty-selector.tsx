@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { cn } from '../../lib/utils'
 
-export type Difficulty = 'iniciante' | 'intermediário' | 'avançado' | 'profissional' | 'caos'
+export type Difficulty = 'iniciante' | 'intermediario' | 'avancado' | 'profissional' | 'caos'
 
 interface DifficultySelectorProps {
   value: Difficulty
@@ -10,8 +10,8 @@ interface DifficultySelectorProps {
 
 const difficulties: { value: Difficulty; label: string; emoji: string }[] = [
   { value: 'iniciante', label: 'Iniciante', emoji: '🌱' },
-  { value: 'intermediário', label: 'Intermediário', emoji: '🌿' },
-  { value: 'avançado', label: 'Avançado', emoji: '🌳' },
+  { value: 'intermediario', label: 'Intermediário', emoji: '🌿' },
+  { value: 'avancado', label: 'Avançado', emoji: '🌳' },
   { value: 'profissional', label: 'Profissional', emoji: '⭐' },
   { value: 'caos', label: 'Caos', emoji: '🌀' },
 ]

@@ -349,3 +349,43 @@ Processing by Api::V1::PromptsController#random as HTML
 Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/api/v1/prompts/random?difficulty=iniciante&exclude_ids=" for ::1 at 2026-04-06 14:55:45 -0300
+Processing by Api::V1::PromptsController#random as */*
+  Parameters: {"difficulty" => "iniciante", "exclude_ids" => ""}
+  [1m[36mPrompt Load (3.3ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 67ms (Views: 1.4ms | ActiveRecord: 24.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=iniciante&exclude_ids=11" for ::1 at 2026-04-06 14:55:46 -0300
+Processing by Api::V1::PromptsController#random as */*
+  Parameters: {"difficulty" => "iniciante", "exclude_ids" => "11"}
+  [1m[36mPrompt Load (1.0ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'iniciante' AND "prompts"."id" != 11 ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=avancado&exclude_ids=11%2C10" for ::1 at 2026-04-06 15:00:27 -0300
+Processing by Api::V1::PromptsController#random as */*
+  Parameters: {"difficulty" => "avancado", "exclude_ids" => "11,10"}
+  [1m[36mPrompt Load (34.3ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'avancado' AND "prompts"."id" NOT IN (11, 10) ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 46ms (Views: 1.8ms | ActiveRecord: 34.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=caos&exclude_ids=11%2C10%2C22" for ::1 at 2026-04-06 15:00:32 -0300
+Processing by Api::V1::PromptsController#random as */*
+  Parameters: {"difficulty" => "caos", "exclude_ids" => "11,10,22"}
+  [1m[36mPrompt Load (0.8ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'caos' AND "prompts"."id" NOT IN (11, 10, 22) ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/prompts/random?difficulty=profissional&exclude_ids=11%2C10%2C22%2C30" for ::1 at 2026-04-06 15:00:38 -0300
+Processing by Api::V1::PromptsController#random as */*
+  Parameters: {"difficulty" => "profissional", "exclude_ids" => "11,10,22,30"}
+  [1m[36mPrompt Load (0.7ms)[0m  [1m[34mSELECT "prompts".* FROM "prompts" WHERE "prompts"."difficulty" = 'profissional' AND "prompts"."id" NOT IN (11, 10, 22, 30) ORDER BY RANDOM() LIMIT 1 /*action='random',application='Backend',controller='prompts'*/[0m
+  ↳ app/controllers/api/v1/prompts_controller.rb:10:in 'Api::V1::PromptsController#random'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+

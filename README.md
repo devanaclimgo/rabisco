@@ -160,11 +160,6 @@ rabisco/
 - 💼 LinkedIn: https://www.linkedin.com/in/ana-clara-gomes-48b83b224/
 
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-
 <div align="center">
 
 ###### Made with ❤️ by Ana Gomes
